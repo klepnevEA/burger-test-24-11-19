@@ -1,0 +1,62 @@
+.accirdion-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.accirdion-menu__list {
+    display: flex;
+}
+
+.accirdion-menu__elem {
+    display: flex;
+
+    &_active,
+    &:hover {
+        .accirdion-menu__content {
+            max-width: 540px;
+        }
+
+        .accirdion-menu__btn-text {
+            color: $ellow;
+        }
+    }
+}
+
+.accirdion-menu__content {
+    overflow: hidden;
+    max-width: 0;
+    background-color: rgba(47, 50, 52, 0.9);
+    transition: max-width .3s;
+}
+
+.accirdion-menu__text {
+    color: #fff;
+    padding: 60px 30px;
+    width: 540px;
+}
+
+
+.accirdion-menu__btn {
+    position: relative;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.accirdion-menu__btn-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    font-size: 40px;
+	font-family: 'Gagalin-Regular';
+    text-transform: uppercase;
+    color: #fff;
+    transform-origin: 0 0;
+    white-space: nowrap;
+    margin-top: -30px;
+}
