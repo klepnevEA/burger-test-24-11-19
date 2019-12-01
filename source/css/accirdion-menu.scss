@@ -16,7 +16,7 @@
     &_active,
     &:hover {
         .accirdion-menu__content {
-            max-width: 540px;
+            max-width: rem(540px);
         }
 
         .accirdion-menu__btn-text {
