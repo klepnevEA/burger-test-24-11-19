@@ -8,8 +8,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
 	<link href="css/style.css" rel="stylesheet">
-
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=85bb1b26-f696-4123-a0b1-443b6a8a02aa&lang=ru_RU" type="text/javascript">
+    </script>
 	<script src="./scripts/jquery-3.2.1.min.js"></script>
+	<script src="./scripts/slick.js"> </script>	
 	<script src="./scripts/scripts.js"> </script>	
 
 </head>
@@ -55,6 +57,9 @@
 								</li>
 							</ul>
 						</nav>
+						<a href="#" class="mobile-nav">
+							<div class="mobile-nav__icon"></div>
+						</a>
 						<a href="#section_order" class="btn btn--open-menu"  id="openMenu">Заказать</a>
 
 					</header>
@@ -272,9 +277,79 @@
                         </div>
                     </div>
                 </li>
+                <li class="slider__elem">
+                    <div class="composition">
+                        <a href="#" class="composition__btn">
+                            <div class="composition__btn-icon">
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#burger"></use>
+                                </svg>
+                            </div>
+                            <div class="composition__title">Состав</div>
+                        </a>
+                        <div class="composition__drop-table">
+                            <ul class="composition__list">
+                                <li class="composition__elem">
+                                    <div class="composition__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprite.svg#beef"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="composition__text">Мясо</div>
+                                    <div class="composition__weight">5кг</div>
+                                </li>
+                                <li class="composition__elem">
+                                    <div class="composition__icon" style="fill: #f9b43b">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprite.svg#cheese"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="composition__text">Сыр</div>
+                                    <div class="composition__weight">2кг</div>
+                                </li>
+                                <li class="composition__elem">
+                                    <div class="composition__icon"  style="fill: #2f3234">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprite.svg#natural"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="composition__text">Травамурава</div>
+                                    <div class="composition__weight">4кг</div>
+                                </li>
+                                <li class="composition__elem">
+                                    <div class="composition__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprite.svg#sauce"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="composition__text">Соус</div>
+                                    <div class="composition__weight">1кг</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slider__col">
+                        <div class="slider__img">
+                            <img src="../../img/content/slider/black-burger.png" alt="Бургер">
+                        </div>
+                    </div>
+                    <div class="slider__col">
+                        <h2 class="title title_white slider__title">Dark BEEF Burger</h2>
+                        <div class="slider__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut beatae
+                            officia laudantium est nemo eaque assumenda iusto aliquam atque earum? Numquam vel itaque
+                            nemo. Natus omnis libero iusto aliquam quae.</div>
+                        <div class="slider__info">
+                            <div class="slider__cost"><span>400</span>рублей</div>
+                            <a href="#" class="btn">Заказать</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
+</section>
+			<section class="section">
+    <div id="map" class="map"></div>
 </section>
 		</div>
 	</div>
@@ -308,5 +383,18 @@
 	</div>
 
 
+	<div class="mobile-menu">
+		<ul class="mobile-menu__list">
+			<li class="mobile-menu__elem">
+				<a href="#" class="mobile-menu__link">Ссылка</a>
+			</li>
+			<li class="mobile-menu__elem">
+				<a href="#" class="mobile-menu__link">Ссылка</a>
+			</li>
+			<li class="mobile-menu__elem">
+				<a href="#" class="mobile-menu__link">Ссылка</a>
+			</li>
+		</ul>
+	</div>
 </body>
 </html>
