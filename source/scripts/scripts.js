@@ -7,6 +7,84 @@ function ready() {
     });
 
 
+    const myForm = document.querySelector('#myForm');
+    const sendBtn = document.querySelector('#button-send');
+    const popup = document.querySelector('#popup');
+
+    const sendform = (e) => {
+        e.preventDefault();
+        if(chechVal(myForm)) {
+            const data = {
+                name: myForm.elements.name.value,
+                phone: myForm.elements.phone.value,
+                comment: myForm.elements.comment.value,
+                to: 'klepnev@yandex.ru'
+            }
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail', true);
+            xhr.send(JSON.stringify(data));
+            xhr.addEventListener('load', () => {
+                if(xhr.response) {
+                    popup.classList.add('active')
+                }
+                console.log('!!' + xhr.response);
+                popup.classList.add('active')
+            })
+        };
+        
+    }
+
+    const chechVal = (form) => {
+        let valid = true;
+
+        if(!chechValFild(form.elements.name)) {
+            valid = false;
+        }
+
+        if(!chechValFild(form.elements.phone)) {
+            valid = false;
+        }
+
+        if(!chechValFild(form.elements.street)) {
+            valid = false;
+        }
+
+        if(!chechValFild(form.elements.house)) {
+            valid = false;
+        }
+
+        if(!chechValFild(form.elements.float)) {
+            valid = false;
+        }
+
+        if(!chechValFild(form.elements.appartament)) {
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    const chechValFild = (field) => {
+        if(!field.checkValidity()) {
+            field.parentNode.nextElementSibling.textContent = field.validationMessage;
+            return false
+        }
+        else {
+            field.parentNode.nextElementSibling.textContent = '';
+            return true;
+        }
+        // field.parentNode.nextElementSibling.textContent = field.validationMessage;
+        // return field.checkValidity();
+    }
+
+    
+
+    sendBtn.addEventListener('click', sendform);
+
+
+
+
 
 
     ymaps.ready(function () {
