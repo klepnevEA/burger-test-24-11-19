@@ -1,9 +1,10 @@
 .accirdion-menu {
     display: flex;
     position: absolute;
+    right: 0;
     top: 0;
     bottom: 0;
-    right: 0;
+    color: #fff;
 }
 
 .accirdion-menu__list {
@@ -13,50 +14,53 @@
 .accirdion-menu__elem {
     display: flex;
 
-    &_active,
+    &_active {
+        .accirdion-menu__content {
+            width: 540px;
+        }
+        .accirdion-menu__title-text {
+            color: $ellow;
+        }
+    }
+
     &:hover {
         .accirdion-menu__content {
-            max-width: rem(540px);
+            width: 540px;
         }
-
-        .accirdion-menu__btn-text {
-            color: red;
+        .accirdion-menu__title-text {
+            color: $ellow;
         }
     }
 }
 
-.accirdion-menu__content {
-    overflow: hidden;
-    max-width: 0;
-    background-color: rgba(47, 50, 52, 0.9);
-    transition: max-width .3s;
-}
-
-.accirdion-menu__text {
-    color: #fff;
-    padding: 60px 30px;
-    width: 540px;
-}
-
-
-.accirdion-menu__btn {
+.accirdion-menu__title {
     position: relative;
     width: 80px;
-    background-size: cover;
+    flex: 0 0 auto;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.accirdion-menu__btn-text {
+.accirdion-menu__title-text {
     position: absolute;
-    top: 100%;
+    bottom: -40px;
     left: 50%;
-    transform: rotate(-90deg) translateY(-50%);
+    transform: rotate(-90deg) translate(0, -50%);
     font-size: 40px;
-	font-family: 'Gagalin-Regular';
-    text-transform: uppercase;
     color: #fff;
     transform-origin: 0 0;
     white-space: nowrap;
-    margin-top: -30px;
+}
+
+.accirdion-menu__content {
+    background-color: rgba(47, 50, 52, 0.9);
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s width;
+}
+
+.accirdion-menu__content-text {
+    padding: 60px 30px;
+    width: 540px;
 }

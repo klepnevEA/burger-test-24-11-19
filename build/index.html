@@ -14,6 +14,7 @@
     </script>
 	<script src="./scripts/jquery-3.2.1.min.js"></script>
 	<script src="./scripts/slick.js"> </script>	
+	<script src="./scripts/fullpage.js"> </script>	
 	<script src="./scripts/scripts.js"> </script>	
 
 </head>
@@ -24,7 +25,7 @@
 	<div class="wrapper"> 
 		<div class="container" id="fullpage">
 			
-			<section class="section section_burger">
+			<section class="section section_burger" data-anchor="section_burger">
 				<div class="section__container">
 					<header class="header">
 						<a href="#" class="logo">
@@ -62,7 +63,7 @@
 						<a href="#" class="mobile-nav">
 							<div class="mobile-nav__icon"></div>
 						</a>
-						<a href="#section_order" class="btn btn--open-menu"  id="openMenu">Заказать</a>
+						<a href="#section_form" class="btn btn--open-menu"  id="openMenu">Заказать</a>
 
 					</header>
 
@@ -85,7 +86,7 @@
 
 
 			
-<section class="section section_advantages">
+<section class="section section_advantages" data-anchor="section_advantages">
 	<div class="section__container section__container_advantages">
 
 	</div>
@@ -94,7 +95,7 @@
 
 
 			
-<section class="section">
+<section class="section"  data-anchor="section_reviews">
 	<div class="reviews">
 		<ul class="reviews__list">
 			<li class="reviews__elem">
@@ -166,39 +167,39 @@
 </section>
 
 
-			<section class="section section_menu">
+			<section class="section section_menu"  data-anchor="section_menu">
   <h2 class="title title_white">Меню</h2>
 
   <div class="accirdion-menu">
     <ul class="accirdion-menu__list">
-      <li class="accirdion-menu__elem" >
-        <a href="#" class="accirdion-menu__btn" style="background-image: url('../../img/content/accordeon/img1.jpg')">
-          <span class="accirdion-menu__btn-text">для мясоедов</span>
+      <li class="accirdion-menu__elem">
+        <a href="#" class="accirdion-menu__title" style="background-image: url(../img/content/accordeon/img1.jpg);">
+          <div class="accirdion-menu__title-text">Для мясоедов</div>
         </a>
         <div class="accirdion-menu__content">
-          <div class="accirdion-menu__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestias dolorum possimus facere ut aliquam quos tempora ipsum nam accusantium. Perspiciatis modi eius veniam aut laudantium sint fuga corrupti accusantium.</div>
+          <div class="accirdion-menu__content-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia eaque repellendus aspernatur aliquid nostrum facilis porro ut dolor, pariatur ipsam corrupti. Adipisci quisquam maiores repellat eius magni corrupti, odit quod?</div>
+        </div>
+      </li>
+      <li class="accirdion-menu__elem accirdion-menu__elem_active">
+        <a href="#" class="accirdion-menu__title" style="background-image: url(../img/content/accordeon/img2.jpg);">
+          <div class="accirdion-menu__title-text">Для мясоедов</div>
+        </a>
+        <div class="accirdion-menu__content">
+          <div class="accirdion-menu__content-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia eaque repellendus aspernatur aliquid nostrum facilis porro ut dolor, pariatur ipsam corrupti. Adipisci quisquam maiores repellat eius magni corrupti, odit quod?</div>
         </div>
       </li>
       <li class="accirdion-menu__elem">
-        <a href="#" class="accirdion-menu__btn" style="background-image: url('../../img/content/accordeon/img2.jpg')">
-          <span class="accirdion-menu__btn-text">для мясоедов</span>
+        <a href="#" class="accirdion-menu__title" style="background-image: url(../img/content/accordeon/img3.jpg);">
+          <div class="accirdion-menu__title-text">Для мясоедов</div>
         </a>
         <div class="accirdion-menu__content">
-          <div class="accirdion-menu__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestias dolorum possimus facere ut aliquam quos tempora ipsum nam accusantium. Perspiciatis modi eius veniam aut laudantium sint fuga corrupti accusantium.</div>
-        </div>
-      </li>
-      <li class="accirdion-menu__elem">
-        <a href="#" class="accirdion-menu__btn" style="background-image: url('../../img/content/accordeon/img3.jpg')">
-          <span class="accirdion-menu__btn-text">для мясоедов</span>
-        </a>
-        <div class="accirdion-menu__content">
-          <div class="accirdion-menu__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestias dolorum possimus facere ut aliquam quos tempora ipsum nam accusantium. Perspiciatis modi eius veniam aut laudantium sint fuga corrupti accusantium.</div>
+          <div class="accirdion-menu__content-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia eaque repellendus aspernatur aliquid nostrum facilis porro ut dolor, pariatur ipsam corrupti. Adipisci quisquam maiores repellat eius magni corrupti, odit quod?</div>
         </div>
       </li>
     </ul>
   </div>
 </section>
-			<section class="section section_slider">
+			<section class="section section_slider" data-anchor="section_slider">
     <div class="section__container section__container_slider">
         <div class="slider">
             <a href="#" class="slider__arrow slider__arrow_left">
@@ -457,7 +458,7 @@
             </form>
         </div>
     </section>
-			<section class="section">
+			<section class="section" data-anchor="section_map">
     <div id="map" class="map"></div>
 </section>
 		</div>

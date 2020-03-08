@@ -6,6 +6,10 @@ function ready() {
         nextArrow: $('.slider__arrow_right')
     });
 
+    $('#fullpage').fullpage({
+        menu: '#navigation__list',
+    });
+
 
     const myForm = document.querySelector('#myForm');
     const sendBtn = document.querySelector('#button-send');
@@ -21,15 +25,17 @@ function ready() {
                 to: 'klepnev@yandex.ru'
             }
             const xhr = new XMLHttpRequest();
+            
             xhr.responseType = 'json';
-            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail', true);
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () => {
-                if(xhr.response) {
-                    popup.classList.add('active')
-                }
-                console.log('!!' + xhr.response);
-                popup.classList.add('active')
+                if(xhr.response.status) {
+                    popup.classList.add('active');
+                    popup.innerText = 'Все ок'
+                    console.log('Все ок');
+                } 
             })
         };
         
@@ -61,7 +67,6 @@ function ready() {
         if(!chechValFild(form.elements.appartament)) {
             valid = false;
         }
-
         return valid;
     }
 

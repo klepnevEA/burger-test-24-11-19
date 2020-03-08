@@ -14,9 +14,18 @@
 		padding: 0 10px; 
 		
 		&_order,
-		&_slider {
+		&_slider,
+		{
 			display: flex;
 			justify-content: center; 
+			align-items: center;
+			height: 100%;
+		}
+
+		&_form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			align-items: center;
 			height: 100%;
 		}
@@ -36,6 +45,10 @@
 			background-repeat: repeat;
 			background-image: url('../img/bg/first-screen-texture.png');  
 		}
+	}
+
+	&_form {
+		background-color: #000;
 	}
 
 	&_advantages
